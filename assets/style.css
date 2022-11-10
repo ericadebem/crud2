@@ -2,9 +2,21 @@
     padding: 0;
     margin: 0;
     font-family: 'Poppins', sans-serif;
-    color: blue;
+    color: rgb(190, 167, 98);
     box-sizing: border-box;
 }
 body {
     background-image: url("./img/world.svg");
+}
+button{
+    background-color: rgb(102, 35, 166);
+    color: white;
+    border: 2px solid rgb(241, 23, 23) ;
+    padding: .4rem .8rem;
+    font-size: 1rem;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.4s;
 }
