@@ -20,3 +20,20 @@ button{
     align-items: center;
     transition: 0.4s;
 }
+button:hover {
+    background-color: brown;
+}
+button:hover > i{
+    color: white;
+}
+button i {
+    color: yellow;
+    font-weight: bold;
+    pointer-events: none;
+}
+input, select {
+    padding: 0.25rem 0.5rem ;
+}
+.hide {
+    display: none;
+}
