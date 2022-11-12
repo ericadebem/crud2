@@ -37,3 +37,18 @@ input, select {
 .hide {
     display: none;
 }
+.todo-container{
+    max-width: 450px;
+    margin: 3rem auto 0;
+    background-color: rgb(131, 85, 85);
+    padding: 1.5rem;
+    border-radius: 15px;
+}
+.todo-container header {
+    text-align: center;
+    padding: 0 1rem 1rem;
+    border-bottom: 1px solid #ccc;
+}
+#todo-form, #edit-form {
+
+}
