@@ -2,16 +2,16 @@
     padding: 0;
     margin: 0;
     font-family: 'Poppins', sans-serif;
-    color: rgb(190, 167, 98);
+    color: rgb(201, 138, 44);
     box-sizing: border-box;
 }
 body {
     background-image: url("./img/world.svg");
 }
 button{
-    background-color: rgb(102, 35, 166);
+    background-color: rgb(16, 26, 78);
     color: white;
-    border: 2px solid rgb(241, 23, 23) ;
+    border: 2px solid rgb(68, 103, 219) ;
     padding: .4rem .8rem;
     font-size: 1rem;
     cursor: pointer;
@@ -21,13 +21,13 @@ button{
     transition: 0.4s;
 }
 button:hover {
-    background-color: brown;
+    background-color: rgb(42, 165, 85);
 }
 button:hover > i{
     color: white;
 }
 button i {
-    color: yellow;
+    color: rgb(167, 216, 43);
     font-weight: bold;
     pointer-events: none;
 }
@@ -65,4 +65,47 @@ input, select {
 }
 #cancel-edit-btn {
     margin-top: 1rem;
+}
+#toolbar {
+    padding: 1rem;
+    border-bottom: 1px solid #ccc;
+    display: flex;
+}
+#toolbar h4 {
+    margin-bottom: .5rem;
+}
+#search {
+    border-right: 1px solid #ddd;
+    padding-right:  1rem;
+    margin-right: 1rem;
+    width: 65%;
+    display: flex;
+    flex-direction: column;
+}
+#search form {
+    display: flex;
+}
+#search input {
+    width: 100%;
+    margin-right: 0.3rem;
+}
+#filter {
+    width: 35%;
+    display: flex;
+    flex-direction: column;
+}
+#filter select {
+    flex: 1rem;
+}
+.todo {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 1rem;
+    border-bottom: 1px solid #ddd;
+    transition: .3s;
+}
+footer{
+    margin-top: 1rem;
+    text-align: center;
 }
