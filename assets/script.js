@@ -7,5 +7,18 @@ const editInput = document.querySelector("#edit-input");
 const cancelEditBtn = document.querySelector("#cancel.edit.btn");
 
 //funcoes
+const savetodo = (texto) => {
 
+    const todo = document.createElement("div")
+    todo.classList.add("todo")
+}
 //eventos
+todoForm.addEventListener("submit",(e) => {
+    e.preventDefault();
+
+    const inputValue = todoInput.value
+    
+    if(inputValue) {
+      savetodo(inputValue)
+    }
+});
