@@ -41,9 +41,21 @@ const savetodo = (text) => {
 todoForm.addEventListener("submit",(e) => {
     e.preventDefault();
 
-    const inputValue = todoInput.value
+    const inputValue = todoInput.value;
     
     if(inputValue) {
-      savetodo(inputValue)
+      savetodo(inputValue);
+    }
+});
+
+document.addEventListener("click", (e) => {
+    const targetE1 = e.target;
+    const parentE1 = targetE1.closest("div");
+
+    if (targetE1.classList.contains("finish-todo")) {
+      parentE1.classList.toggle("done");
+    }
+
+    if (targetE1.classList.contains("remove-todo")) {
     }
 });
