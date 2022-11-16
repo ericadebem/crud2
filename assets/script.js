@@ -36,6 +36,9 @@ const savetodo = (text) => {
     todoInput.value = "";
     todoInput.focus();
 };
+  const toggleForms() => {
+    editForm
+  } 
 
 //eventos
 todoForm.addEventListener("submit",(e) => {
@@ -57,5 +60,10 @@ document.addEventListener("click", (e) => {
     }
 
     if (targetE1.classList.contains("remove-todo")) {
+      parentE1.remove();
+    }
+
+    if (targetE1.classList.contains("edit-todo")) {
+      toggleForms();
     }
 });
