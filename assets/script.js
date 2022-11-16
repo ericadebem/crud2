@@ -36,11 +36,12 @@ const savetodo = (text) => {
     todoInput.value = "";
     todoInput.focus();
 };
-  const toggleForms() => {
+
+  const toggleForms = () => {
     editForm.classList.toggle("hide");
     todoForm.classList.toggle("hide");
-    todolist.classList.toggle("hide");
-  } 
+    todoList.classList.toggle("hide");
+}; 
 
 //eventos
 todoForm.addEventListener("submit",(e) => {
