@@ -70,3 +70,7 @@ document.addEventListener("click", (e) => {
       toggleForms();
     }
 });
+
+cancelEditBtn.addEventListener("click". (e) => {
+    e.preventDefault()
+})
