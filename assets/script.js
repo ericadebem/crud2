@@ -6,6 +6,8 @@ const editForm = document.querySelector("#edit-form");
 const editInput = document.querySelector("#edit-input");
 const cancelEditBtn = document.querySelector("#cancel.edit.btn");
 
+let oldInputValue;
+
 //funcoes
 const savetodo = (text) => {
 
@@ -72,6 +74,9 @@ document.addEventListener("click", (e) => {
 
     if (targetE1.classList.contains("edit-todo")) {
       toggleForms();
+
+      editInput.value = todoTitle;
+      oldInputValue.value = todoTitle;
     }
 });
 
