@@ -60,6 +60,7 @@ document.addEventListener("click", (e) => {
     let todoTitle;
 
     if(parentE1 && parentE1.querySelector("h3")); 
+      todoTitle = parentE1.querySelector("h3").innerText;
 
     if (targetE1.classList.contains("finish-todo")) {
       parentE1.classList.toggle("done");
