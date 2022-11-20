@@ -43,7 +43,12 @@ const savetodo = (text) => {
     editForm.classList.toggle("hide");
     todoForm.classList.toggle("hide");
     todoList.classList.toggle("hide");
-}; 
+};
+
+  const updateTod = (text) => {
+     
+    const todos = document.querySelectorAll("todos");
+  }
 
 //eventos
 todoForm.addEventListener("submit",(e) => {
@@ -87,7 +92,12 @@ cancelEditBtn.addEventListener("click", (e) => {
 });
 
 editForm.addEventListener("submit", (e) => {
-    e.preventDefault()
-    const editInputValue = editInput.value
-    
-}
+    e.preventDefault();
+    const editInputValue = editInput.value;
+
+    if(editInputValue) {
+      updateTodo(editInputValue);
+    }
+
+    toggleForms();
+};
