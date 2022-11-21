@@ -49,8 +49,12 @@ const savetodo = (text) => {
      
     const todos = document.querySelectorAll("todo");
     todos.forEach((todo) => {
-        let todoTitle
-    });
+        let todoTitle = todo.querySelector("h3");
+    
+        if(todoTitle.innerText === oldInputValue) {
+            
+        }
+    })
 }
 
 //eventos
