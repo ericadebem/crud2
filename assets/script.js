@@ -45,10 +45,13 @@ const savetodo = (text) => {
     todoList.classList.toggle("hide");
 };
 
-  const updateTod = (text) => {
+  const updateTodo = (text) => {
      
-    const todos = document.querySelectorAll("todos");
-  }
+    const todos = document.querySelectorAll("todo");
+    todos.forEach((todo) => {
+        let todoTitle
+    });
+}
 
 //eventos
 todoForm.addEventListener("submit",(e) => {
