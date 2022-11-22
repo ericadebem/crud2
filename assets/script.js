@@ -46,13 +46,14 @@ const savetodo = (text) => {
 };
 
   const updateTodo = (text) => {
-     
-    const todos = document.querySelectorAll("todo");
-    todos.forEach((todo) => {
+    const todos = document.querySelectorAll(".todo");
+    
+     todos.forEach((todo) => {
         let todoTitle = todo.querySelector("h3");
     
+        console.log(todoTitle, text);
         if(todoTitle.innerText === oldInputValue) {
-            
+            todo.innerText = text;
         }
     })
 }
@@ -88,7 +89,7 @@ document.addEventListener("click", (e) => {
       toggleForms();
 
       editInput.value = todoTitle;
-      oldInputValue.value = todoTitle;
+      oldInputValue = todoTitle;
     }
 });
 
@@ -107,4 +108,4 @@ editForm.addEventListener("submit", (e) => {
     }
 
     toggleForms();
-};
+});
