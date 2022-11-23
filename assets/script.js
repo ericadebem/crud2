@@ -4,7 +4,7 @@ const todoInput = document.querySelector("#todo-input");
 const todoList = document.querySelector("#todo-list");
 const editForm = document.querySelector("#edit-form");
 const editInput = document.querySelector("#edit-input");
-const cancelEditBtn = document.querySelector("#cancel.edit.btn");
+const cancelEditBtn = document.querySelector("#cancel-edit-btn");
 
 let oldInputValue;
 
@@ -51,9 +51,8 @@ const savetodo = (text) => {
      todos.forEach((todo) => {
         let todoTitle = todo.querySelector("h3");
     
-        console.log(todoTitle, text);
         if(todoTitle.innerText === oldInputValue) {
-            todo.innerText = text;
+            todoTitle.innerText = text;
         }
     })
 }
