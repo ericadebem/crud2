@@ -36,10 +36,18 @@ const saveTodo = (text, done = 0, save = 1) => {
     deleteBtn.innerHTML =  '<i class="fa-solid fa-xmark"></i>';
     todo.appendChild(deleteBtn);
 
+    if (done) {
+
+        todo.classList.add("done");
+    }
+    
+    if (save) {
+        saveTodoLocalStore({ text, done: 0 });
+    }
+
     todoList.appendChild(todo);
 
     todoInput.value = "";
-    todoInput.focus();
 };
 
   const toggleForms = () => {
