@@ -64,9 +64,11 @@ const saveTodo = (text, done = 0, save = 1) => {
     
         if(todoTitle.innerText === oldInputValue) {
             todoTitle.innerText = text;
+
+            updateTodoLocalStorage(oldInputValue, text);
         }
-    })
-}
+    });
+};
 
 //eventos
 todoForm.addEventListener("submit",(e) => {
