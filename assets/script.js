@@ -72,14 +72,16 @@ const saveTodo = (text, done = 0, save = 1) => {
 
 //eventos
 
-const getSearchTodos - (search) => {
+const getSearchdTodos = (search) => {
     const todos = document.querySelectorAll(".todo");
 
     todos.forEach((todo) => {
         const todoTitle = todo.querySelector("h3").innerText.toLowerCase();
 
-        todo.getElementsByClassName.display = "flex";
-        
+        todo.style.display = "flex";
+
+        console.log(todoTitle);
+
     }) 
 }
 todoForm.addEventListener("submit",(e) => {
