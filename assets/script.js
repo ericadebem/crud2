@@ -81,9 +81,12 @@ const getSearchdTodos = (search) => {
         todo.style.display = "flex";
 
         console.log(todoTitle);
-
-    }) 
-}
+       
+        if (!todoTitle.includes(search)) {
+            todo.style.display = "none";
+        }
+    }); 
+};
 todoForm.addEventListener("submit",(e) => {
     e.preventDefault();
 
