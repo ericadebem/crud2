@@ -92,7 +92,19 @@ const getSearchdTodos = (search) => {
     const todos = document.querySelectorAll(".todos");
 
     switch (filterValue) {
-        
+        case "all";
+        todos.forEach((todos) => (todo.style.display = "flex"));
+
+        break;
+
+        case "done";
+        todos.forEach((todo) => 
+            todo.classList.contains("done")
+            ? (todo.style.display = "flex")
+            : (todo.style.display = "none")
+        );
+
+        break;
     }
  }
 todoForm.addEventListener("submit",(e) => {
