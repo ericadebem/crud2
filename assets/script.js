@@ -87,13 +87,21 @@ const getSearchdTodos = (search) => {
         }
     }); 
 };
+
+ const filterTodos = (filterValue) => {
+    const todos = document.querySelectorAll(".todos");
+
+    switch (filterValue) {
+        
+    }
+ }
 todoForm.addEventListener("submit",(e) => {
     e.preventDefault();
 
     const inputValue = todoInput.value;
     
     if(inputValue) {
-      savetodo(inputValue);
+      saveTodo(inputValue);
     }
 });
 
