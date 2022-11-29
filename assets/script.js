@@ -92,16 +92,25 @@ const getSearchdTodos = (search) => {
     const todos = document.querySelectorAll(".todos");
 
     switch (filterValue) {
-        case "all";
-        todos.forEach((todos) => (todo.style.display = "flex"));
+        case "all":
+        todos.forEach((todo) => (todo.style.display = "flex"));
 
         break;
 
-        case "done";
+      case "done":
         todos.forEach((todo) => 
             todo.classList.contains("done")
             ? (todo.style.display = "flex")
             : (todo.style.display = "none")
+        );
+
+        break;
+
+      case "todo":
+        todos.forEach((todo) =>
+         !todo.classList.contains("done")
+         ? (todo.style.display = "flex")
+         : (todo.style.display = "none")
         );
 
         break;
