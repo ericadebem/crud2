@@ -114,8 +114,11 @@ const getSearchdTodos = (search) => {
         );
 
         break;
+
+      default:
+        break;
     }
- }
+ };
 todoForm.addEventListener("submit",(e) => {
     e.preventDefault();
 
