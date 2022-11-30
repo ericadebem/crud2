@@ -139,6 +139,8 @@ document.addEventListener("click", (e) => {
 
     if (targetE1.classList.contains("finish-todo")) {
       parentE1.classList.toggle("done");
+
+      updateTodoLocalStorage(todoTitle);
     }
 
     if (targetE1.classList.contains("remove-todo")) {
