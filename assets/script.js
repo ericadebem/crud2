@@ -137,7 +137,7 @@ document.addEventListener("click", (e) => {
     if (parentE1 && parentE1.querySelector("h3")) { 
       todoTitle = parentE1.querySelector("h3").innerText || "";
     }
-    
+
     if (targetE1.classList.contains("finish-todo")) {
       parentE1.classList.toggle("done");
 
@@ -158,12 +158,12 @@ document.addEventListener("click", (e) => {
 
 cancelEditBtn.addEventListener("click", (e) => {
     e.preventDefault();
-
     toggleForms();
 });
 
 editForm.addEventListener("submit", (e) => {
     e.preventDefault();
+
     const editInputValue = editInput.value;
 
     if(editInputValue) {
@@ -171,4 +171,10 @@ editForm.addEventListener("submit", (e) => {
     }
 
     toggleForms();
+});
+
+searchInput.addEventListener("keyup", (e) => {
+  const search = e.target.value;
+
+  getSearchdTodos(search);
 });
