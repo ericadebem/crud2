@@ -186,3 +186,10 @@ eraseBtn.addEventListener("click", (e) => {
 
   searchInput.dispatchEvent(new Event("keyup"));
 });
+
+ filterBtn.addEventListener("change", (e) => {
+  const filterValue = e.target.value;
+
+  filterTodos(filterValue);
+
+ });
