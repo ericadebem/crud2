@@ -13,7 +13,6 @@ let oldInputValue;
 
 //funcoes
 const saveTodo = (text, done = 0, save = 1) => {
-
     const todo = document.createElement("div");
     todo.classList.add("todo");
 
@@ -37,12 +36,11 @@ const saveTodo = (text, done = 0, save = 1) => {
     todo.appendChild(deleteBtn);
 
     if (done) {
-
         todo.classList.add("done");
     }
     
     if (save) {
-        saveTodoLocalStore({ text, done: 0 });
+        saveTodoLocalStorage({ text, done: 0 });
     }
 
     todoList.appendChild(todo);
@@ -71,8 +69,7 @@ const saveTodo = (text, done = 0, save = 1) => {
 };
 
 //eventos
-
-const getSearchdTodos = (search) => {
+const getSearchedTodos = (search) => {
     const todos = document.querySelectorAll(".todo");
 
     todos.forEach((todo) => {
@@ -83,34 +80,34 @@ const getSearchdTodos = (search) => {
         console.log(todoTitle);
        
         if (!todoTitle.includes(search)) {
-            todo.style.display = "none";
+          todo.style.display = "none";
         }
     }); 
 };
 
  const filterTodos = (filterValue) => {
-    const todos = document.querySelectorAll(".todos");
+    const todos = document.querySelectorAll(".todo");
 
     switch (filterValue) {
-        case "all":
-        todos.forEach((todo) => (todo.style.display = "flex"));
+      case "all":
+      todos.forEach((todo) => (todo.style.display = "flex"));
 
         break;
 
       case "done":
         todos.forEach((todo) => 
-            todo.classList.contains("done")
-            ? (todo.style.display = "flex")
-            : (todo.style.display = "none")
+          todo.classList.contains("done")
+          ? (todo.style.display = "flex")
+          : (todo.style.display = "none")
         );
 
         break;
 
       case "todo":
         todos.forEach((todo) =>
-         !todo.classList.contains("done")
-         ? (todo.style.display = "flex")
-         : (todo.style.display = "none")
+          !todo.classList.contains("done")
+          ? (todo.style.display = "flex")
+          : (todo.style.display = "none")
         );
 
         break;
@@ -130,25 +127,29 @@ todoForm.addEventListener("submit",(e) => {
 });
 
 document.addEventListener("click", (e) => {
-    const targetE1 = e.target;
-    const parentE1 = targetE1.closest("div");
+    const targetEl = e.target;
+    const parentEl = targetEl.closest("div");
     let todoTitle;
 
-    if (parentE1 && parentE1.querySelector("h3")) { 
-      todoTitle = parentE1.querySelector("h3").innerText || "";
+    if (parentEl && parentEl.querySelector("h3")) { 
+      todoTitle = parentEl.querySelector("h3").innerText || "";
     }
 
-    if (targetE1.classList.contains("finish-todo")) {
-      parentE1.classList.toggle("done");
+    if (targetEl.classList.contains("finish-todo")) {
+      parentEl.classList.toggle("done");
 
       updateTodoLocalStorage(todoTitle);
     }
 
-    if (targetE1.classList.contains("remove-todo")) {
-      parentE1.remove();
+    if (targetEl.classList.contains("remove-todo")) {
+      parentEl.remove();
+    
+    //utilizando dados da localStorage
+
+    removeTodoLocalStorage(todoTitle);
     }
 
-    if (targetE1.classList.contains("edit-todo")) {
+    if (targetEl.classList.contains("edit-todo")) {
       toggleForms();
 
       editInput.value = todoTitle;
@@ -176,7 +177,7 @@ editForm.addEventListener("submit", (e) => {
 searchInput.addEventListener("keyup", (e) => {
   const search = e.target.value;
 
-  getSearchdTodos(search);
+  getSearchedTodos(search);
 });
 
 eraseBtn.addEventListener("click", (e) => {
