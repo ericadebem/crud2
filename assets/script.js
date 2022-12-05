@@ -194,3 +194,9 @@ eraseBtn.addEventListener("click", (e) => {
   filterTodos(filterValue);
 
  });
+ // Local Storage
+const getTodosLocalStorage = () => {
+  const todos = JSON.parse(localStorage.getItem("todos")) || [];
+
+  return todos;
+};
