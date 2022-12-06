@@ -200,3 +200,10 @@ const getTodosLocalStorage = () => {
 
   return todos;
 };
+const loadTodos = () => {
+  const todos = getTodosLocalStorage();
+
+  todos.forEach((todo) => {
+    saveTodo(todo.text, todo.done, 0);
+  });
+};
