@@ -213,3 +213,10 @@ const loadTodos = () => {
   todos.push(todo);
   localStorage.setItem("todos", JSON.stringify(todos));
 };
+const removeTodoLocalStorage = (todoText) => {
+  const todos = getTodosLocalStorage();
+
+  const filteredTodos = todos.filter((todo) => todo.text != todoText);
+
+  localStorage.setItem("todos", JSON.stringify(filteredTodos));
+};
