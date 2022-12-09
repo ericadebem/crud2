@@ -220,3 +220,5 @@ const removeTodoLocalStorage = (todoText) => {
 
   localStorage.setItem("todos", JSON.stringify(filteredTodos));
 };
+const updateTodoStatusLocalStorage = (todoText) => {
+  const todos = getTodosLocalStorage();
