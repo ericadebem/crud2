@@ -222,3 +222,7 @@ const removeTodoLocalStorage = (todoText) => {
 };
 const updateTodoStatusLocalStorage = (todoText) => {
   const todos = getTodosLocalStorage();
+
+  todos.map((todo) =>
+    todo.text === todoText ? (todo.done = !todo.done) : null
+  );
