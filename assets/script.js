@@ -228,3 +228,7 @@ const updateTodoStatusLocalStorage = (todoText) => {
   );
   localStorage.setItem("todos", JSON.stringify(todos));
 };
+
+const updateTodoLocalStorage = (todoOldText, todoNewText) => {
+  
+}
