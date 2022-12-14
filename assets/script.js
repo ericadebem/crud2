@@ -232,3 +232,5 @@ const updateTodoStatusLocalStorage = (todoText) => {
 const updateTodoLocalStorage = (todoOldText, todoNewText) => {
   const todos = getTodosLocalStorage();
 }
+todos.map((todo) =>
+)
