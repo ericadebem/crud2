@@ -233,4 +233,5 @@ const updateTodoLocalStorage = (todoOldText, todoNewText) => {
   const todos = getTodosLocalStorage();
 }
 todos.map((todo) =>
-)
+  todo.text === todoOldText ? (todo.text = todoNewText) : null
+);
