@@ -235,3 +235,5 @@ const updateTodoLocalStorage = (todoOldText, todoNewText) => {
 todos.map((todo) =>
   todo.text === todoOldText ? (todo.text = todoNewText) : null
 );
+
+localStorage.setItem("todos", JSON.stringify(todos));
