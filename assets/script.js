@@ -237,3 +237,6 @@ todos.map((todo) =>
 );
 
 localStorage.setItem("todos", JSON.stringify(todos));
+};
+
+loadTodos();
